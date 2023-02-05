@@ -1,6 +1,7 @@
 @use 'variables';
 
 body {
+  font-family: var(--font-base-nunito);
   input {
     color: var(--input-color);
   }
