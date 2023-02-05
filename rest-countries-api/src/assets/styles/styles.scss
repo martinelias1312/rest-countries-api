@@ -1,0 +1,23 @@
+@use 'variables';
+
+body {
+  input {
+    color: var(--input-color);
+  }
+  color: var(--text-color);
+  background-color: var(--bkg-color);
+
+  &.dark-theme {
+    color: var(--text-dark-color);
+    background-color: var(--bkg-dark-color);
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  
+  li {
+    list-style: none;
+  }
+}
