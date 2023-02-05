@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
+  public darkMode = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  public onSetColorMode() {
+    this.darkMode = !this.darkMode;
+  }
 }
