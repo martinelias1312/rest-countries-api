@@ -1,8 +1,10 @@
 <nav>
   <ul>
     <li>Where in the world?</li>
-    <li>
-      <button (click)="onSetColorMode()"><i>icomoon</i>Dark Mode</button>
+    <li (click)="onSetColorMode()">
+      <i class="fas fa-moon" *ngIf="darkMode"></i>
+      <i class="far fa-moon" *ngIf="!darkMode"></i>
+      Dark Mode
     </li>
   </ul>
 </nav>
