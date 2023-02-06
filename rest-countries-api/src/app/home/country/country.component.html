@@ -1,10 +1,10 @@
 <figure>
-    <img [src]=""
-         alt="State flag">
+    <img [src]="country.flags.png"
+         [alt]="country.flags.png.alt">
     <figcaption>
-      <!-- <h2>{{ title }}</h2>
-      <p>Population: <span>{{ population }}</span></p>
-      <p>Region: <span>{{ region }}</span></p>
-      <p>Capital: <span>{{ capital }}</span></p> -->
+      <h2>{{ country.name.official }}</h2>
+      <p>Population: <span>{{ country.population }}</span></p>
+      <p>Region: <span>{{ country.region }}</span></p>
+      <p>Capital: <span>{{ country.capital }}</span></p>
     </figcaption>
 </figure>

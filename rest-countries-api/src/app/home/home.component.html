@@ -17,7 +17,7 @@
     </div>
   </form>
 
-  <div class="countries">
-    <app-country></app-country>
+  <div class="countries" *ngFor="let country of countries">
+    <app-country [country]="country"></app-country>
   </div>
 </div>
