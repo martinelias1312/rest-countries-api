@@ -5,7 +5,7 @@ body {
   color: var(--text-color);
   background-color: var(--bkg-color);
 
-  input, nav, .select {  
+  input, nav, .select, figure {  
     border: none;
     background-color: var(--el-color);
     box-shadow: 0 8px 8px -7px #ccc;
@@ -20,8 +20,7 @@ body {
     opacity: 1;
   }
 
-  input, .select {
-    font-weight: 300;
+  input, .select, figure {
     border-radius: 5px;
   }
 
@@ -35,7 +34,7 @@ body {
   }
 
   &.dark-theme {
-    input, nav, .select, select {
+    input, nav, .select, select, figure {
       background-color: var(--el-dark-color);
       color: var(--text-dark-color);
       box-shadow: 0 8px 8px -8px #1e1e1e;

@@ -1,0 +1,17 @@
+figure {
+  img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  figcaption {
+    padding: 10px 25px 25px 25px;
+    p {
+      font-weight: 600;
+      span {
+        font-weight: 300;
+      }
+    }
+  }
+}
