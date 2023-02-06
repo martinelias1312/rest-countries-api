@@ -5,25 +5,57 @@ body {
   color: var(--text-color);
   background-color: var(--bkg-color);
 
-  input, nav {  
+  input, nav, .select {  
     border: none;
     background-color: var(--el-color);
     box-shadow: 0 8px 8px -7px #ccc;
   }
 
-  input::placeholder {
-    color: var(--input-color);
+  .select::after {
+    background-color: var(--text-color);
   }
 
-  input {
+  .fa-search, input::placeholder {
+    color: var(--input-color);
+    opacity: 1;
+  }
+
+  input, .select {
+    font-weight: 300;
     border-radius: 5px;
   }
 
+  #search-input {
+    border: 1px solid var(--bkg-color);
+
+    &:focus {
+      outline: none;
+      border: 1px solid var(--text-color);
+    }
+  }
+
   &.dark-theme {
-    input, nav {
+    input, nav, .select, select {
       background-color: var(--el-dark-color);
-      color: var(---text-dark-color);
+      color: var(--text-dark-color);
       box-shadow: 0 8px 8px -8px #1e1e1e;
+    }
+
+    .select::after {
+      background-color: var(--text-dark-color);
+    }
+
+    .fa-search, input::placeholder {
+      color: var(--text-dark-color);
+    }
+
+    #search-input {
+      border: 1px solid var(--bkg-dark-color);
+
+      &:focus {
+        outline: none;
+        border: 1px solid var(--text-dark-color);
+      }
     }
 
     color: var(--text-dark-color);
@@ -37,5 +69,25 @@ ul {
   
   li {
     list-style: none;
+  }
+}
+
+select {
+  // A reset of styles, including removing the default dropdown arrow
+  appearance: none;
+  // Additional resets for further consistency
+  background-color: transparent;
+  border: none;
+  padding: 15px 30px 15px 15px;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+
+  &::-ms-expand {
+    display: none;
   }
 }
