@@ -1,0 +1,45 @@
+form, .countries {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  margin: 20px;
+
+  input {
+    padding: 15px 0 15px 75px;
+  }
+
+  .fa-search {
+    width: fit-content;
+    position: relative;
+    top: -36px;
+    left: 30px;
+    font-size: 20px
+  }
+
+  .select {
+    width: 55%;
+    margin: 35px 0 20px;
+    display: grid;
+    border: none;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      margin-right: 15px;
+      width: 0.8em;
+      height: 0.5em;
+      // clip-path: polygon(0 100%, 25% 100%, 50% 40%, 75% 100%, 100% 100%, 50% 0); // arrow up
+      clip-path: polygon(25% 0, 0 0, 50% 100%, 100% 0, 75% 0, 50% 60%); // arow down
+      justify-self: end;
+    }
+
+    grid-template-areas: "select";
+    align-items: center;
+  }
+
+  select, .select:after {
+    grid-area: select;
+  }
+}

@@ -1,13 +1,21 @@
 <app-navigation></app-navigation>
 <div>
-  <form>
-    <input type="text">
-    <select>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-    </select>
+  <form id="search-form" (submit)="onSearchFormSubmit()">
+    <label for="search-input"></label>
+    <input type="search" name="search-input" id="search-input" minlength="1" maxlength="20" placeholder="Search for a country..." aria-label="Search country through site content" autofocus>
+    <i class="fas fa-search"></i>
+    <label for="regions"></label>
+    <div class="select">
+      <select name="regions" id="regions">
+        <option value="" disabled selected>Filter by Region</option>
+        <option value="africa">Africa</option>
+        <option value="america">America</option>
+        <option value="asia">Asia</option>
+        <option value="europe">Europe</option>
+        <option value="oceania">Oceania</option>
+      </select>
+    </div>
   </form>
+
+  <div class="countries"></div>
 </div>
