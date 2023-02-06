@@ -16,5 +16,6 @@ export class NavigationComponent implements OnInit {
 
   public onSetColorMode() {
     this.darkMode = !this.darkMode;
+    document.body.classList.toggle("dark-theme");
   }
 }
