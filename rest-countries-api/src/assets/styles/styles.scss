@@ -2,13 +2,30 @@
 
 body {
   font-family: var(--font-base-nunito);
-  input {
-    color: var(--input-color);
-  }
   color: var(--text-color);
   background-color: var(--bkg-color);
 
+  input, nav {  
+    border: none;
+    background-color: var(--el-color);
+    box-shadow: 0 8px 8px -7px #ccc;
+  }
+
+  input::placeholder {
+    color: var(--input-color);
+  }
+
+  input {
+    border-radius: 5px;
+  }
+
   &.dark-theme {
+    input, nav {
+      background-color: var(--el-dark-color);
+      color: var(---text-dark-color);
+      box-shadow: 0 8px 8px -8px #1e1e1e;
+    }
+
     color: var(--text-dark-color);
     background-color: var(--bkg-dark-color);
   }
