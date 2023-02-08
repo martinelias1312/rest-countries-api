@@ -1,0 +1,10 @@
+@media screen and (min-width: 999px) {
+  form {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+  }
+
+  .select {
+    margin: 0 !important;
+  }
+}

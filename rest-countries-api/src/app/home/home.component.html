@@ -1,23 +1,25 @@
 <app-navigation></app-navigation>
 <div>
   <form id="search-form" (submit)="onSearchFormSubmit()">
-    <label for="search-input"></label>
-    <input type="search" name="search-input" id="search-input" minlength="1" maxlength="30" placeholder="Search for a country..." aria-label="Search country through site content" autofocus>
-    <i class="fas fa-search"></i>
-    <label for="regions"></label>
-    <div class="select">
-      <select name="regions" id="regions">
-        <option value="" disabled selected>Filter by Region</option>
-        <option value="africa">Africa</option>
-        <option value="america">America</option>
-        <option value="asia">Asia</option>
-        <option value="europe">Europe</option>
-        <option value="oceania">Oceania</option>
-      </select>
-    </div>
+    <label for="search-input" class="search-input__label">
+      <i class="fas fa-search"></i>
+      <input type="search" name="search-input" id="search-input" minlength="1" maxlength="30" placeholder="Search for a country..." aria-label="Search country through site content" autofocus>
+    </label>
+    <label for="regions">
+      <div class="select">
+        <select name="regions" id="regions">
+          <option value="" disabled selected>Filter by Region</option>
+          <option value="africa">Africa</option>
+          <option value="america">America</option>
+          <option value="asia">Asia</option>
+          <option value="europe">Europe</option>
+          <option value="oceania">Oceania</option>
+        </select>
+      </div>
+    </label>
   </form>
 
-  <div class="countries" *ngFor="let country of countries">
-    <app-country [country]="country"></app-country>
+  <div class="countries">
+    <app-country [country]="country" *ngFor="let country of countries"></app-country>
   </div>
 </div>
